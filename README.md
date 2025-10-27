@@ -38,6 +38,8 @@ A comprehensive predictive analytics dashboard for the mining industry, demonstr
 
 ## Quick Start
 
+### Development (Local)
+
 ```bash
 # Install dependencies
 npm install --legacy-peer-deps
@@ -50,6 +52,35 @@ npm run build
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
+
+### Docker Deployment
+
+#### Using Docker Compose (Recommended)
+
+```bash
+# Build and start the container
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop the container
+docker-compose down
+```
+
+The application will be available at [http://localhost:8080](http://localhost:8080)
+
+#### Using Docker directly
+
+```bash
+# Build the image
+docker build -t mining-analytics .
+
+# Run the container
+docker run -d -p 8080:80 mining-analytics
+```
+
+The application will be available at [http://localhost:8080](http://localhost:8080)
 
 ## Navigation
 
